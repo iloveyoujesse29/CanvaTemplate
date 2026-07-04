@@ -1,0 +1,48 @@
+<style>
+  :root{--pine:#1E3A34;--pine-soft:#2C4F47;--euc:#DCE7E0;--euc-deep:#C4D6CB;--warm:#FBFAF7;
+    --brass:#A9803A;--brass-soft:#C9A24B;--ink:#33403B;--muted:#6A756F;--hair:#D9D2C6;--cream:#F4EFE7;}
+  *{box-sizing:border-box;}
+  .tile{width:1080px;height:1080px;padding:96px;display:flex;flex-direction:column;overflow:hidden;position:relative;
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;color:var(--ink);}
+  .serif{font-family:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,serif;}
+  .ey{font-size:28px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;}
+  .tile h2{font-family:Georgia,serif;font-weight:400;line-height:1.08;margin:auto 0 0;font-size:96px;}
+  .foot{font-size:28px;letter-spacing:.16em;text-transform:uppercase;margin-top:34px;opacity:.88;}
+  .tile ul{margin:34px 0 auto;padding:0;list-style:none;font-size:44px;line-height:2;}
+  .tile li{display:flex;align-items:baseline;}
+  .tile li::before{content:"—";color:var(--brass);margin-right:20px;}
+  .big{font-family:Georgia,serif;font-size:210px;line-height:1;color:var(--brass);margin:auto 0 0;}
+  .quote{font-family:Georgia,serif;font-size:72px;line-height:1.28;font-style:italic;margin:auto 0;}
+  .mark{font-family:Georgia,serif;font-size:32px;font-weight:700;}
+  .ph{color:var(--brass);font-style:italic;font-weight:600;}
+  .note{font-size:40px;color:var(--muted);margin:24px 0 auto;line-height:1.4;}
+  .t-pine{background:var(--pine);color:#EAF1EC;} .t-pine .ey{color:var(--brass-soft);} .t-pine h2{color:#fff;} .t-pine .mark{color:#fff;}
+  .t-euc{background:var(--euc);color:var(--pine);} .t-euc .ey{color:var(--brass);} .t-euc h2{color:var(--pine);}
+  .t-warm{background:var(--warm);color:var(--ink);} .t-warm .ey{color:var(--brass);} .t-warm h2{color:var(--pine);}
+  .t-cream{background:var(--cream);color:var(--ink);} .t-cream .ey{color:var(--brass);} .t-cream h2{color:var(--pine);}
+  .t-brass{background:linear-gradient(160deg,#B98B44,#9A6E2E);color:#fff;} .t-brass .ey{color:#F4E6C9;} .t-brass h2{color:#fff;}
+</style>
+
+<section data-document-role="page" data-label="Meet your VA" class="tile t-pine"><span class="ey">Meet your VA</span><h2 class="serif">Hi, I'm <span class="ph">{Name}</span> — your behind-the-scenes person.</h2><span class="foot">@yourhandle</span></section>
+
+<section data-document-role="page" data-label="What I do" class="tile t-euc"><span class="ey">What I do</span><ul><li>Inbox &amp; calendar</li><li>Scheduling &amp; travel</li><li>Admin &amp; systems</li><li>Light project help</li></ul><span class="mark">The Solo Suite</span></section>
+
+<section data-document-role="page" data-label="How we work" class="tile t-warm"><span class="ey">How we work</span><h2 class="serif">Onboard.<br>Hand off.<br>Breathe.</h2><span class="foot">3 simple steps</span></section>
+
+<section data-document-role="page" data-label="Client love" class="tile t-cream"><span class="ey">Client love</span><p class="quote">"I got <span class="ph">{10 hours}</span> a week back. Best decision I made this year."</p><span class="mark" style="color:var(--pine)">— <span class="ph">{Client}</span></span></section>
+
+<section data-document-role="page" data-label="Tip 01" class="tile t-pine"><span class="ey">Tip 01</span><h2 class="serif">Batch your admin into one window a day.</h2><span class="foot">Save this →</span></section>
+
+<section data-document-role="page" data-label="Tip 02" class="tile t-euc"><span class="ey">Tip 02</span><h2 class="serif">If it's not in your calendar, it isn't real.</h2><span class="mark">The Solo Suite</span></section>
+
+<section data-document-role="page" data-label="Tip 03" class="tile t-warm"><span class="ey">Tip 03</span><h2 class="serif">Delegate the task <span class="ph">and</span> the decision.</h2><span class="foot">Save this →</span></section>
+
+<section data-document-role="page" data-label="Sound familiar" class="tile t-pine"><span class="ey">Sound familiar?</span><ul><li>Inbox out of control</li><li>Working past 6pm</li><li>Dropping small stuff</li></ul><span class="foot" style="color:var(--brass-soft)">= time for a VA</span></section>
+
+<section data-document-role="page" data-label="Packages" class="tile t-brass"><span class="ey">Packages from</span><span class="big" style="color:#fff">$X</span><h2 class="serif" style="font-size:64px;margin-top:16px;">per month.</h2><span class="foot">Details in bio</span></section>
+
+<section data-document-role="page" data-label="Worth it" class="tile t-cream"><span class="ey">You asked</span><h2 class="serif">"Is a VA worth it?"</h2><p class="note">If your time is worth more than <span class="ph">{$X}</span>/hr — yes.</p></section>
+
+<section data-document-role="page" data-label="Free gift" class="tile t-euc"><span class="ey">Free gift</span><h2 class="serif">Grab my <span class="ph">Monthly Money Check-in</span> — free.</h2><span class="foot">Link in bio</span></section>
+
+<section data-document-role="page" data-label="Booking open" class="tile t-pine"><span class="ey">Booking open</span><h2 class="serif">Taking <span class="ph">{2}</span> new clients this month.</h2><span class="foot" style="color:var(--brass-soft)">DM "READY" →</span></section>

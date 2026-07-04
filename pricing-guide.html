@@ -1,0 +1,31 @@
+<style>
+  :root{--pine:#1E3A34;--pine-soft:#2C4F47;--euc:#DCE7E0;--euc-deep:#C4D6CB;--warm:#FBFAF7;
+    --brass:#A9803A;--ink:#33403B;--muted:#6A756F;--hair:#D9D2C6;}
+  *{box-sizing:border-box;}
+  .serif{font-family:Georgia,serif;}
+  .ph{color:var(--brass);font-style:italic;font-weight:600;}
+  .page{width:8.5in;min-height:11in;margin:0 auto;background:#fff;padding:0.9in 0.95in;
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;color:var(--ink);line-height:1.55;}
+  .page .label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);font-weight:600;}
+  .page h2{font-family:Georgia,serif;font-weight:400;color:var(--pine);font-size:32px;margin:6px 0 18px;}
+  .pkg{border:1px solid var(--euc-deep);border-radius:8px;padding:20px 22px;margin-bottom:14px;display:grid;grid-template-columns:1fr auto;gap:6px 20px;}
+  .pkg.f{border:2px solid var(--brass);background:linear-gradient(180deg,rgba(220,231,224,.4),#fff);}
+  .pkg .tier{color:var(--pine);font-size:18px;font-weight:700;margin:0;}
+  .pkg .price{font-family:Georgia,serif;font-size:24px;color:var(--brass);text-align:right;}
+  .pkg ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:13.5px;}
+  .mark{font-family:Georgia,serif;font-weight:700;}
+</style>
+
+<section data-document-role="page" data-label="Services & Pricing" class="page">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--hair);padding-bottom:12px;margin-bottom:26px;">
+    <span class="mark" style="color:var(--pine)">The Solo <span style="color:var(--brass)">Suite</span></span>
+    <span style="font-size:11px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;">Services &amp; Pricing</span>
+  </div>
+  <p class="label">Work with me</p>
+  <h2>Services &amp; pricing.</h2>
+  <p style="color:var(--muted);max-width:60ch;">Simple, transparent packages designed to give you back your time. Not sure which fits? Message me and I'll point you to the right one.</p>
+  <div class="pkg"><div><p class="tier"><span class="ph">{Essentials}</span></p><ul><li>Inbox &amp; calendar management</li><li>Scheduling &amp; simple admin</li><li>Weekly recap report</li></ul></div><div class="price"><span class="ph">{$X}</span><div style="font-size:12px;color:var(--muted);font-family:'Segoe UI',sans-serif;">/ month</div></div></div>
+  <div class="pkg f"><div><p class="tier"><span class="ph">{Growth}</span> · most popular</p><ul><li>Everything in Essentials</li><li>Light project coordination</li><li>Basic reporting &amp; light social</li></ul></div><div class="price"><span class="ph">{$X}</span><div style="font-size:12px;color:var(--muted);font-family:'Segoe UI',sans-serif;">/ month</div></div></div>
+  <div class="pkg"><div><p class="tier"><span class="ph">{Partner}</span></p><ul><li>Everything in Growth</li><li>Priority turnaround</li><li>Monthly strategy check-in</li></ul></div><div class="price"><span class="ph">{$X}</span><div style="font-size:12px;color:var(--muted);font-family:'Segoe UI',sans-serif;">/ month</div></div></div>
+  <p style="color:var(--muted);font-size:13px;margin-top:14px;">Ready to start? <span class="ph">{your booking link}</span> · <span class="ph">{you@email.com}</span></p>
+</section>
