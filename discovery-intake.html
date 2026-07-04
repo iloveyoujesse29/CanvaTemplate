@@ -1,0 +1,131 @@
+<style>
+  :root{
+    --ground:#FBFAF7; --pine:#1E3A34; --pine-soft:#2C4F47; --euc:#DCE7E0; --euc-deep:#C4D6CB;
+    --brass:#A9803A; --brass-soft:#C29A54; --ink:#33403B; --muted:#6A756F; --hair:#D9D2C6; --paper:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  .page{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;}
+
+  .ws-wrap{background:#EDE9E1; margin:0; padding:32px 0;
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink); line-height:1.55; -webkit-font-smoothing:antialiased;}
+  .page{width:8.5in; min-height:11in; margin:0 auto 28px; background:var(--paper); position:relative;
+    padding:0.9in 0.95in 0.8in; overflow:hidden; box-shadow:0 10px 34px rgba(30,58,52,.16); border-radius:2px;}
+  .serif{font-family:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,serif;}
+  .label{font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--brass); font-weight:600;}
+  .masthead{display:flex; justify-content:space-between; align-items:baseline;
+    border-bottom:1px solid var(--hair); padding-bottom:14px; margin-bottom:34px;}
+  .mark{font-family:Georgia,serif; font-size:15px; letter-spacing:.02em; color:var(--pine); font-weight:700;}
+  .mark span{color:var(--brass);}
+  .pagenum{font-size:11px; letter-spacing:.18em; color:var(--muted); text-transform:uppercase;}
+  h2{font-family:Georgia,serif; font-weight:400; color:var(--pine); font-size:32px; line-height:1.12; margin:0 0 6px; text-wrap:balance;}
+  .sub{color:var(--muted); font-size:15px; margin:0 0 24px; max-width:60ch;}
+  h3{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--brass); margin:26px 0 12px; font-weight:700; border-bottom:1px solid var(--hair); padding-bottom:6px;}
+  .ph{color:var(--brass); font-style:italic; font-weight:600;}
+  /* discovery questions */
+  .q{display:grid; grid-template-columns:32px 1fr; gap:14px; padding:12px 0; border-bottom:1px dotted var(--hair); align-items:start;}
+  .q .n{font-family:Georgia,serif; font-size:20px; color:var(--brass); line-height:1.2;}
+  .q p{margin:0; font-size:15px; color:var(--ink);}
+  .q .hint{color:var(--muted); font-size:12.5px; margin-top:3px;}
+  /* form fields */
+  .field{margin:0 0 16px;}
+  .field label{display:block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--pine-soft); font-weight:700; margin-bottom:6px;}
+  .line{border-bottom:1.4px solid var(--euc-deep); height:26px;}
+  .line.tall{height:60px;}
+  .row2{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .row3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px;}
+  .checks{display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:4px;}
+  .chk{display:flex; align-items:center; gap:8px; font-size:14px; color:var(--ink);}
+  .chk .b{width:15px; height:15px; border:1.6px solid var(--brass); border-radius:3px; flex:0 0 auto;}
+  @media print{.ws-wrap{background:#fff; padding:0;} .page{box-shadow:none; margin:0 auto; border-radius:0; page-break-after:always; min-height:auto; height:11in;} @page{size:letter; margin:0;}}
+  @media (max-width:900px){.page{width:100%; padding:7% 6%;} .row2,.row3{grid-template-columns:1fr;}}
+</style>
+
+
+  <!-- DOC 1: DISCOVERY CALL SCRIPT -->
+  <section data-document-role="page" class="page">
+    <div class="masthead"><span class="mark">The Solo <span>Suite</span></span><span class="pagenum">Discovery Call · Script</span></div>
+    <p class="label">Doc 1 of 3 · for your eyes</p>
+    <h2>Discovery call script.</h2>
+    <p class="sub">Your calm, confident guide for a first call. Ask, listen, take notes in the margins. The goal: understand their problem and decide if you're a fit — not to pitch.</p>
+    <h3>Warm up</h3>
+    <div class="q"><div class="n">1</div><div><p>Tell me a bit about your business and what a typical week looks like for you right now.</p></div></div>
+    <div class="q"><div class="n">2</div><div><p>What made you start looking for help at this particular moment?</p><p class="hint">Listen for the trigger — that's the real pain.</p></div></div>
+    <h3>Dig into the problem</h3>
+    <div class="q"><div class="n">3</div><div><p>Which tasks are eating the most time or causing the most stress?</p></div></div>
+    <div class="q"><div class="n">4</div><div><p>What have you tried before, and what didn't work about it?</p></div></div>
+    <div class="q"><div class="n">5</div><div><p>If we cleared those off your plate, what would you do with the time?</p><p class="hint">Their answer = the value you're really selling.</p></div></div>
+    <h3>Logistics &amp; fit</h3>
+    <div class="q"><div class="n">6</div><div><p>Roughly how many hours a week do you think this needs?</p></div></div>
+    <div class="q"><div class="n">7</div><div><p>Which tools do you use day to day? (email, calendar, project tool, etc.)</p></div></div>
+    <div class="q"><div class="n">8</div><div><p>How do you prefer to communicate, and how often?</p></div></div>
+    <div class="q"><div class="n">9</div><div><p>Do you have a budget range in mind for this?</p></div></div>
+    <h3>Close</h3>
+    <div class="q"><div class="n">10</div><div><p>What questions do you have for me?</p></div></div>
+    <div class="q"><div class="n">11</div><div><p>Here's what I'd suggest as next steps… <span class="ph">{tee up the proposal}</span>. Sound good?</p></div></div>
+  </section>
+
+  <!-- DOC 2: NEW CLIENT INTAKE -->
+  <section data-document-role="page" class="page">
+    <div class="masthead"><span class="mark">The Solo <span>Suite</span></span><span class="pagenum">New Client · Intake</span></div>
+    <p class="label">Doc 2 of 3 · client fills this in</p>
+    <h2>New client intake form.</h2>
+    <p class="sub">Welcome! A few details so I can hit the ground running. Fill in what you can — we'll cover the rest on our kickoff call.</p>
+    <h3>About you</h3>
+    <div class="row2">
+      <div class="field"><label>Your name</label><div class="line"></div></div>
+      <div class="field"><label>Business name</label><div class="line"></div></div>
+    </div>
+    <div class="row2">
+      <div class="field"><label>Best email</label><div class="line"></div></div>
+      <div class="field"><label>Phone (optional)</label><div class="line"></div></div>
+    </div>
+    <div class="field"><label>What does your business do, in one sentence?</label><div class="line"></div></div>
+    <h3>The work</h3>
+    <div class="field"><label>What would you like me to take off your plate first?</label><div class="line tall"></div></div>
+    <div class="field"><label>What does "this is going great" look like in 90 days?</label><div class="line tall"></div></div>
+    <h3>How we'll work</h3>
+    <div class="field"><label>Tools you use (email, calendar, project tool, files, etc.)</label><div class="line"></div></div>
+    <div class="row2">
+      <div class="field"><label>Best way to reach you</label><div class="line"></div></div>
+      <div class="field"><label>Your working hours / timezone</label><div class="line"></div></div>
+    </div>
+    <div class="field"><label>Communication style</label>
+      <div class="checks">
+        <span class="chk"><span class="b"></span>Quick &amp; to the point</span>
+        <span class="chk"><span class="b"></span>Detailed &amp; thorough</span>
+        <span class="chk"><span class="b"></span>Check in often</span>
+        <span class="chk"><span class="b"></span>Only when needed</span>
+      </div>
+    </div>
+    <div class="field"><label>Anything else I should know?</label><div class="line tall"></div></div>
+  </section>
+
+  <!-- DOC 3: PROJECT BRIEF -->
+  <section data-document-role="page" class="page">
+    <div class="masthead"><span class="mark">The Solo <span>Suite</span></span><span class="pagenum">Project · Brief</span></div>
+    <p class="label">Doc 3 of 3 · per project</p>
+    <h2>Project brief.</h2>
+    <p class="sub">One page to scope a single project so we both know exactly what "done" looks like before it starts.</p>
+    <div class="row2">
+      <div class="field"><label>Project name</label><div class="line"></div></div>
+      <div class="field"><label>Requested by</label><div class="line"></div></div>
+    </div>
+    <h3>The ask</h3>
+    <div class="field"><label>What are we creating or doing?</label><div class="line tall"></div></div>
+    <div class="field"><label>Why now — what's the goal behind it?</label><div class="line"></div></div>
+    <h3>Details</h3>
+    <div class="field"><label>Deliverables (what you'll hand back)</label><div class="line tall"></div></div>
+    <div class="row3">
+      <div class="field"><label>Due date</label><div class="line"></div></div>
+      <div class="field"><label>Priority</label>
+        <div class="checks" style="margin-top:6px;">
+          <span class="chk"><span class="b"></span>Low</span><span class="chk"><span class="b"></span>Med</span><span class="chk"><span class="b"></span>High</span>
+        </div></div>
+      <div class="field"><label>Est. hours</label><div class="line"></div></div>
+    </div>
+    <div class="field"><label>Assets / access / logins needed</label><div class="line"></div></div>
+    <div class="field"><label>How we'll know it's done (definition of "done")</label><div class="line tall"></div></div>
+    <div class="field"><label>Notes</label><div class="line"></div></div>
+  </section>
+

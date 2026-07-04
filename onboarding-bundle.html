@@ -1,0 +1,80 @@
+<style>
+  :root{
+    --pine:#1E3A34; --pine-soft:#2C4F47; --euc:#DCE7E0; --euc-deep:#C4D6CB; --warm:#FBFAF7;
+    --brass:#A9803A; --brass-soft:#C29A54; --ink:#33403B; --muted:#6A756F; --hair:#D9D2C6; --paper:#fff;
+  }
+  *{box-sizing:border-box;}
+  .page{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;}
+
+  .ws-wrap{background:#EDE9E1; margin:0; padding:32px 0;
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif; color:var(--ink); line-height:1.55;}
+  .serif{font-family:Georgia,"Iowan Old Style",Palatino,serif;}
+  .page{width:8.5in; min-height:11in; margin:0 auto 28px; background:var(--paper); position:relative; padding:0.9in 0.95in 0.8in; overflow:hidden; box-shadow:0 10px 34px rgba(30,58,52,.16); border-radius:2px;}
+  .label{font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--brass); font-weight:600;}
+  .masthead{display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid var(--hair); padding-bottom:14px; margin-bottom:40px;}
+  .mark{font-family:Georgia,serif; font-size:15px; letter-spacing:.02em; color:var(--pine); font-weight:700;} .mark span{color:var(--brass);}
+  .pagenum{font-size:11px; letter-spacing:.18em; color:var(--muted); text-transform:uppercase;}
+  h1.cover{font-size:56px; line-height:1.03; color:var(--pine); font-weight:400; margin:.1in 0 0; letter-spacing:-.01em; text-wrap:balance;}
+  .rule{width:56px; height:3px; background:var(--brass); border:0; margin:24px 0;}
+  .lede{font-size:19px; line-height:1.5; color:var(--pine-soft); max-width:52ch;}
+  .ph{color:var(--brass); font-style:italic; font-weight:600;}
+  .cover-page{background:radial-gradient(120% 80% at 100% 0%, rgba(220,231,224,.75) 0%, rgba(220,231,224,0) 55%), var(--paper);}
+  .badge{position:absolute; top:1.5in; right:.95in; background:var(--brass); color:#fff; border-radius:50%; width:104px; height:104px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; transform:rotate(6deg); box-shadow:0 8px 20px rgba(169,128,58,.35);}
+  .badge b{font-family:Georgia,serif; font-size:15px; line-height:1;} .badge span{font-size:9px; letter-spacing:.12em; text-transform:uppercase; margin-top:3px;}
+  .cover-foot{position:absolute; left:.95in; right:.95in; bottom:.8in; border-top:1px solid var(--hair); padding-top:14px; display:flex; justify-content:space-between; align-items:flex-end;}
+  h2{font-family:Georgia,serif; font-weight:400; color:var(--pine); font-size:30px; margin:0 0 8px;}
+  .item{display:grid; grid-template-columns:40px 1fr auto; gap:20px; align-items:start; padding:22px 0; border-bottom:1px solid var(--hair);}
+  .item:last-child{border-bottom:0;}
+  .item .n{font-family:Georgia,serif; font-size:30px; color:var(--brass); line-height:1;}
+  .item h3{margin:0 0 3px; color:var(--pine); font-size:18px; font-weight:700;}
+  .item p{margin:0; color:var(--muted); font-size:14px; max-width:52ch;}
+  .item .pg{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--brass); white-space:nowrap; padding-top:6px;}
+  .card{background:var(--euc); border-radius:8px; padding:20px 24px; margin-top:24px; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;}
+  .card .lab{font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--pine-soft); font-weight:700;}
+  .card .save{font-family:Georgia,serif; font-size:22px; color:var(--pine);}
+  @media print{.ws-wrap{background:#fff; padding:0;} .page{box-shadow:none; page-break-after:always; margin:0 auto; min-height:auto; height:11in; border-radius:0;} @page{size:letter; margin:0;}}
+  @media (max-width:900px){.page{width:100%; padding:7% 6%;} h1.cover{font-size:11vw;} .item{grid-template-columns:32px 1fr;} .item .pg{grid-column:2;}}
+</style>
+
+
+  <!-- COVER -->
+  <section data-document-role="page" class="page cover-page">
+    <div class="masthead"><span class="mark">The Solo <span>Suite</span></span><span class="pagenum">Onboarding Bundle</span></div>
+    <div class="badge"><b>Best<br>value</b><span>4-in-1</span></div>
+    <p class="label">The complete set</p>
+    <h1 class="cover serif">Your whole<br>client process,<br>done for you.</h1>
+    <hr class="rule">
+    <p class="lede">Everything you need to take a new client from "yes, let's work together" to fully onboarded — beautifully, and in one cohesive brand.</p>
+    <div class="cover-foot">
+      <div><p class="label" style="margin-bottom:6px;">Includes</p><p class="serif" style="font-size:19px; color:var(--pine); margin:0;">4 matching templates</p></div>
+      <div style="text-align:right;"><p class="label" style="margin-bottom:6px;">Editable in</p><p class="serif" style="font-size:19px; color:var(--pine); margin:0;">Canva + Word</p></div>
+    </div>
+  </section>
+
+  <!-- CONTENTS -->
+  <section data-document-role="page" class="page">
+    <div class="masthead"><span class="mark">The Solo <span>Suite</span></span><span class="pagenum">What's inside</span></div>
+    <p class="label">4 templates · 1 cohesive brand</p>
+    <h2>What's in your bundle.</h2>
+    <p style="color:var(--muted); margin-bottom:18px;">Each piece shares the same warm, professional design — so your whole client experience looks intentional from first hello to signed contract.</p>
+
+    <div class="item"><div class="n serif">1</div>
+      <div><h3>Client Welcome Packet</h3><p>A 6-page welcome that answers every "what happens next?" — onboarding timeline, how you work, services, and a get-started checklist.</p></div>
+      <div class="pg">6 pages</div></div>
+    <div class="item"><div class="n serif">2</div>
+      <div><h3>Service Proposal</h3><p>A persuasive 4-page proposal with tiered packages and pricing, timeline, and a signature block to win the "yes."</p></div>
+      <div class="pg">4 pages</div></div>
+    <div class="item"><div class="n serif">3</div>
+      <div><h3>Service Agreement</h3><p>A plain-English, customizable contract (Canva + Word) covering scope, fees, revisions, cancellation, and confidentiality.</p></div>
+      <div class="pg">Canva + Word</div></div>
+    <div class="item"><div class="n serif">4</div>
+      <div><h3>Discovery + Intake Set</h3><p>A discovery-call script, a client intake form, and a project brief — so you gather everything you need before day one.</p></div>
+      <div class="pg">3 forms</div></div>
+
+    <div class="card">
+      <div><p class="lab">Buy the bundle</p><p style="margin:4px 0 0; color:var(--muted); font-size:14px;">Everything above, together — for less than buying each on its own.</p></div>
+      <div style="text-align:right;"><p class="save">Save vs. singles</p><p style="margin:2px 0 0; color:var(--brass); font-weight:700;">Bundle price <span class="ph">{$34}</span></p></div>
+    </div>
+    <p style="text-align:center; color:var(--muted); font-size:12.5px; margin-top:22px;">A digital template set by The Solo Suite. Some elements made with AI assistance. The agreement is a customizable template, not legal advice. Single-business use; no resale.</p>
+  </section>
+
