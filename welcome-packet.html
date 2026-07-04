@@ -1,0 +1,167 @@
+<style>
+  :root{
+    --ground:#FBFAF7; --pine:#1E3A34; --pine-soft:#2C4F47;
+    --euc:#DCE7E0; --euc-deep:#C4D6CB; --brass:#A9803A; --brass-soft:#C29A54;
+    --ink:#33403B; --muted:#6A756F; --hair:#D9D2C6; --paper:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  .serif{font-family:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,serif;}
+  .page{
+    width:8.5in; min-height:11in; margin:0 auto; background:var(--paper);
+    position:relative; padding:0.9in 0.95in 0.8in; overflow:hidden;
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink); line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  .label{font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--brass); font-weight:600;}
+  .masthead{display:flex; justify-content:space-between; align-items:baseline;
+    border-bottom:1px solid var(--hair); padding-bottom:14px; margin-bottom:40px;}
+  .mark{font-family:Georgia,serif; font-size:15px; letter-spacing:.02em; color:var(--pine); font-weight:700;}
+  .mark span{color:var(--brass);}
+  .pagenum{font-size:11px; letter-spacing:.18em; color:var(--muted); text-transform:uppercase;}
+  h1.cover{font-size:64px; line-height:1.02; color:var(--pine); font-weight:400; margin:.15in 0 0; letter-spacing:-.01em; text-wrap:balance;}
+  h2{font-family:Georgia,serif; font-weight:400; color:var(--pine); font-size:30px; line-height:1.12; margin:0 0 18px; text-wrap:balance;}
+  h3{font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--pine-soft); margin:0 0 6px; font-weight:700;}
+  p{margin:0 0 14px; max-width:64ch;}
+  .lede{font-size:19px; line-height:1.5; color:var(--pine-soft);}
+  .ph{color:var(--brass); font-style:italic; font-weight:600;}
+  /* cover */
+  .cover-page{background:
+     radial-gradient(120% 80% at 100% 0%, rgba(220,231,224,.75) 0%, rgba(220,231,224,0) 55%),
+     var(--paper);}
+  .cover-foot{position:absolute; left:.95in; right:.95in; bottom:.8in; display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid var(--hair); padding-top:16px;}
+  .rule{width:56px; height:3px; background:var(--brass); border:0; margin:26px 0;}
+  /* timeline */
+  .steps{display:flex; flex-direction:column; gap:2px; margin-top:8px;}
+  .step{display:grid; grid-template-columns:54px 1fr; gap:20px; padding:20px 0; border-bottom:1px solid var(--hair);}
+  .step:last-child{border-bottom:0;}
+  .step .n{font-family:Georgia,serif; font-size:34px; color:var(--brass); line-height:1;}
+  .step h4{margin:0 0 4px; color:var(--pine); font-size:17px; font-weight:700;}
+  .step p{margin:0; color:var(--muted); font-size:14.5px;}
+  /* info cards */
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:10px;}
+  .card{background:var(--euc); border-radius:6px; padding:20px 22px;}
+  .card .label{color:var(--pine-soft);}
+  .card p{margin:8px 0 0; font-size:14.5px; color:var(--ink);}
+  .card strong{color:var(--pine);}
+  /* packages */
+  .pkg{border:1px solid var(--euc-deep); border-radius:8px; padding:22px 24px; margin-bottom:14px; display:grid; grid-template-columns:1fr auto; gap:8px 20px; align-items:start;}
+  .pkg .price{font-family:Georgia,serif; font-size:26px; color:var(--brass); white-space:nowrap;}
+  .pkg ul{margin:8px 0 0; padding-left:18px; color:var(--muted); font-size:14px;}
+  .pkg li{margin:3px 0;}
+  /* checklist */
+  .check{list-style:none; padding:0; margin:14px 0 0;}
+  .check li{display:flex; gap:14px; align-items:flex-start; padding:12px 0; border-bottom:1px solid var(--hair); font-size:15.5px;}
+  .box{flex:0 0 auto; width:20px; height:20px; border:2px solid var(--brass); border-radius:4px; margin-top:1px;}
+  .contact{background:var(--pine); color:#EAF1EC; border-radius:8px; padding:26px 28px; margin-top:26px; display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+  .contact .label{color:var(--brass-soft);}
+  .contact a,.contact b{color:#fff; font-weight:600; text-decoration:none;}
+  .contact .col p{margin:4px 0 0; font-size:14px; color:#C7D6CD;}
+  @media print{
+    .ws-wrap{background:#fff; padding:0;}
+    .page{box-shadow:none; margin:0 auto; border-radius:0; page-break-after:always; min-height:auto; height:11in;}
+    @page{size:letter; margin:0;}
+  }
+  @media (max-width:900px){ .page{width:100%; padding:7% 6%;} h1.cover{font-size:12vw;} }
+</style>
+
+  <!-- 1. COVER -->
+  <section class="page cover-page" data-document-role="page" data-label="Cover">
+    <div class="masthead">
+      <span class="mark">The Solo <span>Suite</span></span>
+      <span class="pagenum">Client Welcome</span>
+    </div>
+    <p class="label">Welcome aboard</p>
+    <h1 class="cover serif">A warm<br>hello &amp; what<br>happens next.</h1>
+    <hr class="rule">
+    <p class="lede" style="max-width:52ch;">Everything you need to know about working together — laid out simply, so you can settle in and know exactly what to expect.</p>
+    <div class="cover-foot">
+      <div>
+        <p class="label" style="margin-bottom:6px;">Prepared for</p>
+        <p class="serif" style="font-size:22px; color:var(--pine); margin:0;"><span class="ph">{Client Name}</span></p>
+      </div>
+      <div style="text-align:right;">
+        <p class="label" style="margin-bottom:6px;">From</p>
+        <p class="serif" style="font-size:22px; color:var(--pine); margin:0;"><span class="ph">{Your Name}</span></p>
+        <p style="font-size:13px; color:var(--muted); margin:2px 0 0;"><span class="ph">{Your Business}</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. WELCOME LETTER -->
+  <section class="page" data-document-role="page" data-label="Welcome letter">
+    <div class="masthead"><span class="mark">The Solo <span>Suite</span></span><span class="pagenum">01 · Hello</span></div>
+    <p class="label">A note from your side</p>
+    <h2>I'm so glad you're here.</h2>
+    <p class="lede">Hi <span class="ph">{Client First Name}</span> — thank you for trusting me with your <span class="ph">{service, e.g. inbox &amp; calendar}</span>. This packet is your home base for our work together.</p>
+    <p>Starting with someone new always comes with a few questions: How will we talk? When will things get done? What do you need from me? The next few pages answer all of that, so nothing feels uncertain.</p>
+    <p>My promise is simple: clear communication, work delivered when I say it will be, and one less thing on your plate. If anything here raises a question, just reply to my last email — I'd rather over-explain than leave you guessing.</p>
+    <p>Let's get you set up.</p>
+    <p class="serif" style="font-size:26px; color:var(--pine); margin-top:26px;"><span class="ph">{Your Name}</span></p>
+    <p class="label" style="margin-top:-6px;"><span class="ph">{Your Title}</span> · <span class="ph">{Your Business}</span></p>
+  </section>
+
+  <!-- 3. WHAT HAPPENS NEXT -->
+  <section class="page" data-document-role="page" data-label="What happens next">
+    <div class="masthead"><span class="mark">The Solo <span>Suite</span></span><span class="pagenum">02 · Onboarding</span></div>
+    <p class="label">The first two weeks</p>
+    <h2>What happens next.</h2>
+    <p style="color:var(--muted);">A simple path from "just signed" to "fully rolling." I'll guide each step — you'll never wonder what's coming.</p>
+    <div class="steps">
+      <div class="step"><div class="n serif">1</div><div><h4>Welcome &amp; paperwork</h4><p>You'll receive your agreement and invoice to sign and settle. Once that's done, we're officially a team.</p></div></div>
+      <div class="step"><div class="n serif">2</div><div><h4>Kickoff call &amp; access</h4><p>We meet for <span class="ph">{30–45 min}</span> to align on goals and priorities, then set up the tools and logins I'll need.</p></div></div>
+      <div class="step"><div class="n serif">3</div><div><h4>Your first week</h4><p>I ease into your day-to-day, ask questions as they come up, and send a short end-of-week recap of what's done and what's next.</p></div></div>
+      <div class="step"><div class="n serif">4</div><div><h4>Settle into rhythm</h4><p>We lock in our regular check-in and reporting cadence. From here, the work quietly runs in the background.</p></div></div>
+    </div>
+  </section>
+
+  <!-- 4. HOW WE'LL WORK -->
+  <section class="page" data-document-role="page" data-label="How we'll work">
+    <div class="masthead"><span class="mark">The Solo <span>Suite</span></span><span class="pagenum">03 · Working together</span></div>
+    <p class="label">The ground rules</p>
+    <h2>How we'll work together.</h2>
+    <div class="grid2">
+      <div class="card"><p class="label">Hours</p><p><strong><span class="ph">{Mon–Fri, 9–4 ET}</span>.</strong> I keep consistent hours so you know when I'm on. Weekends and holidays off unless we've planned otherwise.</p></div>
+      <div class="card"><p class="label">Response time</p><p><strong>Within <span class="ph">{one business day}</span>.</strong> Anything truly urgent? Flag it "URGENT" and I'll jump on it.</p></div>
+      <div class="card"><p class="label">Where we talk</p><p>Day-to-day in <span class="ph">{email / Slack}</span>. Tasks live in <span class="ph">{Asana / Trello}</span> so nothing slips.</p></div>
+      <div class="card"><p class="label">Staying in sync</p><p>A <span class="ph">{weekly}</span> recap from me, plus a <span class="ph">{monthly}</span> check-in call to look ahead together.</p></div>
+    </div>
+    <h3 style="margin-top:26px;">A few things that help</h3>
+    <p style="color:var(--muted); font-size:15px;">Batch non-urgent requests when you can, give me the "why" behind a task so I can make good calls on your behalf, and tell me early if a priority shifts. Small habits, big difference.</p>
+  </section>
+
+  <!-- 5. SERVICES & INVESTMENT -->
+  <section class="page" data-document-role="page" data-label="Services & investment">
+    <div class="masthead"><span class="mark">The Solo <span>Suite</span></span><span class="pagenum">04 · Services</span></div>
+    <p class="label">What's included</p>
+    <h2>Your services &amp; investment.</h2>
+    <div class="pkg">
+      <div><h4 style="margin:0 0 2px; color:var(--pine); font-size:18px;"><span class="ph">{Essentials Package}</span></h4>
+        <ul><li>Inbox &amp; calendar management</li><li>Scheduling &amp; travel</li><li>Weekly recap report</li></ul></div>
+      <div class="price"><span class="ph">{$X}</span><span style="font-size:13px; color:var(--muted); display:block; font-family:'Segoe UI',sans-serif;">/ month</span></div>
+    </div>
+    <div class="pkg">
+      <div><h4 style="margin:0 0 2px; color:var(--pine); font-size:18px;"><span class="ph">{Growth Package}</span></h4>
+        <ul><li>Everything in Essentials</li><li>Light project coordination</li><li>Basic reporting &amp; light social support</li></ul></div>
+      <div class="price"><span class="ph">{$X}</span><span style="font-size:13px; color:var(--muted); display:block; font-family:'Segoe UI',sans-serif;">/ month</span></div>
+    </div>
+    <div class="card" style="margin-top:8px;"><p class="label">Anything else?</p><p>Need something outside these packages? Just ask — I'll scope it and send a quick quote before any work begins. No surprise invoices, ever.</p></div>
+  </section>
+
+  <!-- 6. NEXT STEPS -->
+  <section class="page" data-document-role="page" data-label="Get started">
+    <div class="masthead"><span class="mark">The Solo <span>Suite</span></span><span class="pagenum">05 · Get started</span></div>
+    <p class="label">Three small things</p>
+    <h2>Let's get started.</h2>
+    <p style="color:var(--muted);">Tick these off and we're ready to roll. I'll send reminders — no need to keep it all in your head.</p>
+    <ul class="check">
+      <li><span class="box"></span><div><b style="color:var(--pine);">Sign your agreement &amp; invoice.</b><br><span style="color:var(--muted); font-size:14px;">Links are in your welcome email.</span></div></li>
+      <li><span class="box"></span><div><b style="color:var(--pine);">Book your kickoff call.</b><br><span style="color:var(--muted); font-size:14px;">Grab a time here: <span class="ph">{your booking link}</span>.</span></div></li>
+      <li><span class="box"></span><div><b style="color:var(--pine);">Share access &amp; logins.</b><br><span style="color:var(--muted); font-size:14px;">I'll send a secure form for tools &amp; passwords.</span></div></li>
+    </ul>
+    <div class="contact">
+      <div class="col"><p class="label">Email</p><p><a href="#"><span class="ph">{you@yourbusiness.com}</span></a></p></div>
+      <div class="col"><p class="label">Book a call</p><p><b><span class="ph">{your booking link}</span></b></p></div>
+      <div class="col"><p class="label">Hours</p><p><span class="ph">{Mon–Fri, 9–4 ET}</span></p></div>
+    </div>
+    <p style="text-align:center; color:var(--muted); font-size:13px; margin-top:24px;">Thank you for being here — I can't wait to get started.<br><span class="serif" style="color:var(--pine); font-size:16px;">— <span class="ph">{Your Name}</span></span></p>
+  </section>
