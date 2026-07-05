@@ -1,0 +1,114 @@
+<style>
+  :root{--pine:#1E3A34;--pine-soft:#2C4F47;--euc:#DCE7E0;--euc-deep:#C4D6CB;--warm:#FBFAF7;
+    --brass:#A9803A;--brass-soft:#C29A54;--ink:#33403B;--muted:#6A756F;--hair:#D9D2C6;}
+  *{box-sizing:border-box;}
+  .serif{font-family:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,serif;}
+  .board{width:2000px;height:2000px;overflow:hidden;position:relative;
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;color:var(--ink);}
+  .wordmark{font-family:Georgia,serif;font-weight:700;color:var(--pine);letter-spacing:.01em;}
+  .wordmark .s{color:var(--brass);}
+  .keyword{font-size:56px;letter-spacing:.15em;text-transform:uppercase;color:var(--brass);font-weight:700;}
+  .ey{font-size:34px;letter-spacing:.30em;text-transform:uppercase;color:var(--brass);font-weight:700;}
+  .stack{position:relative;width:900px;height:1160px;}
+  .sheet{position:absolute;top:70px;left:50px;width:760px;height:985px;background:#fff;border-radius:10px;
+    box-shadow:0 30px 70px rgba(30,58,52,.22);padding:64px;overflow:hidden;}
+  .sheet .bar{height:14px;width:200px;background:var(--euc-deep);border-radius:6px;}
+  .sheet .tick{height:12px;width:120px;background:var(--brass-soft);border-radius:6px;margin-top:60px;}
+  .sheet .hd{height:40px;width:74%;background:#C9D3CC;border-radius:8px;margin-top:26px;}
+  .sheet .hd.s{width:52%;margin-top:16px;}
+  .sheet .ln{height:14px;width:88%;background:#E4E9E4;border-radius:6px;margin-top:40px;}
+  .sheet .ln.s{width:60%;}
+  .sheet.b1{transform:rotate(-6deg) translate(-30px,26px);}
+  .sheet.b2{transform:rotate(5deg) translate(120px,-6px);}
+  .mock{position:absolute;top:44px;left:70px;width:770px;height:1000px;background:var(--pine);border-radius:12px;
+    box-shadow:0 60px 120px rgba(30,58,52,.40);padding:70px 66px;color:#EAF1EC;overflow:hidden;transform:rotate(2deg);}
+  .mock .mm{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:22px;}
+  .mock .mmk{font-family:Georgia,serif;font-weight:700;font-size:28px;color:#fff;} .mock .mmk .s{color:var(--brass-soft);}
+  .mock .mp{font-size:18px;letter-spacing:.2em;text-transform:uppercase;color:#9FB2AA;}
+  .mock .mey{font-size:22px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass-soft);font-weight:700;margin-top:52px;}
+  .mock h3{font-family:Georgia,serif;font-weight:400;color:#fff;font-size:76px;line-height:1.03;margin:20px 0 0;}
+  .mock .r{width:100px;height:6px;background:var(--brass);margin:40px 0;border:0;}
+  .mock .ml{font-size:27px;line-height:1.5;color:#B9CABF;max-width:22ch;}
+  .mock .mf{position:absolute;left:66px;right:66px;bottom:66px;border-top:1px solid rgba(255,255,255,.2);padding-top:24px;display:flex;justify-content:space-between;}
+  .mock .mf .l{font-size:16px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-soft);}
+  .mock .mf .v{font-family:Georgia,serif;font-style:italic;color:var(--brass-soft);font-size:27px;margin-top:6px;}
+  /* dashboard mock internals */
+  .kpirow{display:flex;gap:20px;margin-top:40px;}
+  .kpi{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:26px;}
+  .kpi .kl{font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-soft);}
+  .kpi .kv{font-family:Georgia,serif;font-size:52px;color:#fff;margin-top:12px;}
+  .chart{display:flex;align-items:flex-end;gap:22px;height:280px;margin-top:44px;padding:0 6px;}
+  .chart span{flex:1;background:var(--brass-soft);border-radius:8px 8px 0 0;opacity:.9;}
+  .trow{display:flex;gap:16px;margin-top:24px;}
+  .trow div{height:20px;border-radius:6px;background:rgba(255,255,255,.18);}
+  /* ig tile mock */
+  .igtile{position:absolute;top:70px;left:90px;width:730px;height:730px;border-radius:16px;padding:70px;overflow:hidden;box-shadow:0 50px 110px rgba(30,58,52,.38);display:flex;flex-direction:column;}
+  .igtile.front{background:var(--pine);color:#EAF1EC;z-index:3;transform:rotate(2deg);top:250px;left:150px;}
+  .igtile.b1{background:var(--euc);z-index:1;transform:rotate(-7deg);top:120px;left:40px;}
+  .igtile.b2{background:linear-gradient(160deg,#B98B44,#9A6E2E);z-index:2;transform:rotate(6deg);top:360px;left:470px;width:560px;height:560px;padding:56px;}
+  .igtile .ige{font-size:24px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;}
+  .igtile h4{font-family:Georgia,serif;font-weight:400;font-size:78px;line-height:1.03;margin:auto 0 0;}
+  .igtile .igh{font-size:24px;letter-spacing:.16em;text-transform:uppercase;margin-top:28px;}
+  /* what's inside cards */
+  .grid6{display:grid;gap:34px;}
+  .pcard{border-radius:16px;padding:32px;display:flex;flex-direction:column;}
+  .pcard .prev{flex:1;border-radius:10px;padding:36px;overflow:hidden;position:relative;box-shadow:0 16px 34px rgba(30,58,52,.12);}
+  .pcard .lab{display:flex;align-items:baseline;gap:16px;margin-top:24px;}
+  .pcard .lab .n{font-family:Georgia,serif;font-size:44px;line-height:1;}
+  .pcard .lab h4{font-family:Georgia,serif;font-weight:400;font-size:38px;margin:0;}
+  .pcard .desc{font-size:25px;margin:8px 0 0;}
+  .mtop{display:flex;justify-content:space-between;align-items:center;}
+  .mwk{font-family:Georgia,serif;font-weight:700;font-size:19px;}
+  .mchip{height:9px;width:64px;border-radius:5px;}
+  .meye{height:10px;width:90px;border-radius:5px;margin-top:34px;}
+  .mh{height:28px;width:78%;border-radius:6px;margin-top:16px;}
+  .mh.s{width:52%;margin-top:10px;}
+  .mrow{height:12px;border-radius:5px;margin-top:22px;}
+  .badges{display:flex;gap:22px;flex-wrap:wrap;}
+  .badge{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.92);border:1px solid var(--euc-deep);border-radius:100px;padding:20px 32px;font-size:29px;color:var(--pine);font-weight:600;line-height:1;}
+  .badge .d{width:16px;height:16px;border-radius:50%;background:var(--brass);flex:0 0 auto;}
+</style>
+<section data-document-role="page" data-label="Hero" class="board" style="background:linear-gradient(135deg,#E4EDE6 0%,#FBFAF7 62%);">
+  <div style="position:absolute;top:104px;left:130px;"><span class="wordmark" style="font-size:44px;">The Solo <span class="s">Suite</span></span></div>
+  <div style="display:flex;height:100%;align-items:center;padding:0 120px 0 130px;gap:40px;">
+    <div style="flex:1;">
+      <p class="keyword">Canva Template · 4 Pages</p>
+      <h1 class="serif" style="font-size:160px;line-height:.97;color:var(--pine);margin:26px 0 0;letter-spacing:-.01em;">Service<br>Proposal</h1>
+      <hr style="width:120px;height:7px;background:var(--brass);border:0;margin:44px 0;">
+      <p style="font-size:44px;line-height:1.36;color:var(--pine-soft);max-width:640px;">Win the yes with a proposal that looks the part.</p>
+      <p style="font-size:33px;color:var(--muted);margin-top:36px;">For virtual assistants, freelancers & designers</p>
+    </div>
+    <div style="flex:0 0 auto;"><div class="stack">
+    <div class="sheet b1"><div class="bar"></div><div class="tick"></div><div class="hd"></div><div class="hd s"></div><div class="ln"></div><div class="ln"></div><div class="ln s"></div></div>
+    <div class="sheet b2"><div class="bar"></div><div class="tick"></div><div class="hd"></div><div class="hd s"></div><div class="ln"></div><div class="ln"></div><div class="ln s"></div></div>
+    <div class="mock">
+      <div class="mm"><span class="mmk">The Solo <span class="s">Suite</span></span><span class="mp">Proposal</span></div>
+      <p class="mey">Service Proposal</p>
+      <h3 class="serif">A proposal,<br>made just<br>for you.</h3>
+      <hr class="r">
+      <p class="ml">How I can help, what’s included, and what it costs.</p>
+      <div class="mf"><div><p class="l">Prepared for</p><p class="v">{Client}</p></div><div style="text-align:right;"><p class="l">From</p><p class="v">{Your Name}</p></div></div>
+    </div>
+  </div></div>
+  </div>
+  <div style="position:absolute;bottom:104px;left:130px;" class="badges"><span class="badge"><span class="d"></span>Editable in Canva</span><span class="badge"><span class="d"></span>Instant download</span><span class="badge"><span class="d"></span>US Letter PDF</span></div>
+</section>
+<section data-document-role="page" data-label="What's inside" class="board" style="background:var(--warm);padding:140px 130px 120px;display:flex;flex-direction:column;">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;">
+    <div><p class="ey">4 designed pages</p><h2 class="serif" style="font-size:116px;color:var(--pine);margin:14px 0 0;font-weight:400;">What's inside.</h2></div>
+    <span class="wordmark" style="font-size:40px;">The Solo <span class="s">Suite</span></span>
+  </div>
+  <div class="grid6" style="grid-template-columns:repeat(2,1fr);margin-top:60px;flex:1;"><div class="pcard" style="background:var(--pine);height:700px;"><div class="prev" style="background:#1E3A34;border:1px solid rgba(255,255,255,.14);"><div class="mtop"><span class="mwk" style="color:#fff;">The Solo <span style="color:var(--brass-soft);">Suite</span></span><span class="mchip" style="background:rgba(255,255,255,.25);"></span></div><div class="meye" style="background:var(--brass-soft);"></div><div class="mh" style="background:rgba(255,255,255,.85);"></div><div class="mh s" style="background:rgba(255,255,255,.85);"></div><div class="mrow" style="width:80%;background:rgba(255,255,255,.28);"></div><div class="mrow" style="width:64%;background:rgba(255,255,255,.28);"></div></div><div class="lab"><span class="n" style="color:var(--brass-soft);">01</span><h4 style="color:#fff;">Cover</h4></div><p class="desc" style="color:#CBD8D0;">A confident first page.</p></div><div class="pcard" style="background:var(--euc);height:700px;"><div class="prev" style="background:#fff;"><div class="mtop"><span class="mwk" style="color:var(--pine);">The Solo <span style="color:var(--brass);">Suite</span></span><span class="mchip" style="background:var(--euc-deep);"></span></div><div class="meye" style="background:var(--brass);"></div><div class="mh" style="background:#C9D3CC;"></div><div class="mrow" style="width:92%;background:#E4E9E4;"></div><div class="mrow" style="width:88%;background:#E4E9E4;"></div><div class="mrow" style="width:70%;background:#E4E9E4;"></div></div><div class="lab"><span class="n" style="color:var(--brass);">02</span><h4 style="color:var(--pine);">Your approach</h4></div><p class="desc" style="color:var(--pine-soft);">“Here’s what I heard” framing.</p></div><div class="pcard" style="background:var(--euc);height:700px;"><div class="prev" style="background:#fff;"><div class="mtop"><span class="mwk" style="color:var(--pine);">The Solo <span style="color:var(--brass);">Suite</span></span><span class="mchip" style="background:var(--euc-deep);"></span></div><div class="meye" style="background:var(--brass);"></div><div style="display:flex;gap:14px;margin-top:24px;"><div style="flex:1;background:var(--euc);border-radius:8px;padding:18px;"><div style="height:8px;width:60%;background:var(--brass);border-radius:4px;"></div><div style="height:26px;width:80%;background:#C9D3CC;border-radius:5px;margin-top:14px;"></div></div><div style="flex:1;background:var(--euc);border-radius:8px;padding:18px;"><div style="height:8px;width:60%;background:var(--brass);border-radius:4px;"></div><div style="height:26px;width:80%;background:#C9D3CC;border-radius:5px;margin-top:14px;"></div></div></div><div style="display:flex;align-items:flex-end;gap:12px;height:110px;margin-top:22px;"><span style="flex:1;height:50%;background:var(--brass-soft);border-radius:5px 5px 0 0;"></span><span style="flex:1;height:72%;background:var(--brass-soft);border-radius:5px 5px 0 0;"></span><span style="flex:1;height:58%;background:var(--brass-soft);border-radius:5px 5px 0 0;"></span><span style="flex:1;height:88%;background:var(--brass-soft);border-radius:5px 5px 0 0;"></span><span style="flex:1;height:66%;background:var(--brass-soft);border-radius:5px 5px 0 0;"></span></div></div><div class="lab"><span class="n" style="color:var(--brass);">03</span><h4 style="color:var(--pine);">Packages & pricing</h4></div><p class="desc" style="color:var(--pine-soft);">2–3 tiers with a “most popular” nudge.</p></div><div class="pcard" style="background:var(--pine);height:700px;"><div class="prev" style="background:#fff;"><div class="mtop"><span class="mwk" style="color:var(--pine);">The Solo <span style="color:var(--brass);">Suite</span></span><span class="mchip" style="background:var(--euc-deep);"></span></div><div class="meye" style="background:var(--brass);"></div><div class="mh s" style="background:#C9D3CC;margin-top:18px;"></div><div style="display:flex;gap:12px;margin-top:20px;align-items:center;"><span style="font-family:Georgia,serif;font-size:30px;color:var(--brass);">1</span><span class="mrow" style="flex:1;width:auto;background:#E4E9E4;margin:0;"></span></div><div style="display:flex;gap:12px;margin-top:20px;align-items:center;"><span style="font-family:Georgia,serif;font-size:30px;color:var(--brass);">2</span><span class="mrow" style="flex:1;width:auto;background:#E4E9E4;margin:0;"></span></div><div style="display:flex;gap:12px;margin-top:20px;align-items:center;"><span style="font-family:Georgia,serif;font-size:30px;color:var(--brass);">3</span><span class="mrow" style="flex:1;width:auto;background:#E4E9E4;margin:0;"></span></div></div><div class="lab"><span class="n" style="color:var(--brass-soft);">04</span><h4 style="color:#fff;">Timeline & acceptance</h4></div><p class="desc" style="color:#CBD8D0;">Next steps + a signature block.</p></div></div>
+  <p style="text-align:center;font-size:30px;color:var(--muted);margin-top:52px;">Part of <b style="color:var(--pine);">The Solo Suite</b> — a matching toolkit for solo service providers.</p>
+</section>
+<section data-document-role="page" data-label="How it works" class="board" style="background:var(--pine);padding:140px 130px 120px;color:#EAF1EC;display:flex;flex-direction:column;">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;">
+    <div><p class="ey" style="color:var(--brass-soft);">Ready in minutes</p><h2 class="serif" style="font-size:116px;color:#fff;margin:14px 0 0;font-weight:400;">How it works.</h2></div>
+    <span class="wordmark" style="font-size:40px;color:#fff;">The Solo <span style="color:var(--brass-soft);">Suite</span></span>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:56px;margin-top:90px;flex:1;"><div style="display:flex;align-items:center;gap:52px;border-bottom:1px solid rgba(255,255,255,.16);padding-bottom:56px;"><span class="serif" style="font-size:124px;color:var(--brass-soft);line-height:1;">1</span><div><h4 class="serif" style="font-size:64px;color:#fff;margin:0 0 12px;font-weight:400;">Buy & download instantly</h4><p style="font-size:37px;color:#CBD8D0;margin:0;">You'll get a PDF with your Canva template link.</p></div></div><div style="display:flex;align-items:center;gap:52px;border-bottom:1px solid rgba(255,255,255,.16);padding-bottom:56px;"><span class="serif" style="font-size:124px;color:var(--brass-soft);line-height:1;">2</span><div><h4 class="serif" style="font-size:64px;color:#fff;margin:0 0 12px;font-weight:400;">Open in free Canva</h4><p style="font-size:37px;color:#CBD8D0;margin:0;">Click "Use template" — no design skills needed.</p></div></div><div style="display:flex;align-items:center;gap:52px;"><span class="serif" style="font-size:124px;color:var(--brass-soft);line-height:1;">3</span><div><h4 class="serif" style="font-size:64px;color:#fff;margin:0 0 12px;font-weight:400;">Customize & send</h4><p style="font-size:37px;color:#CBD8D0;margin:0;">Swap text, colors & logo, then export or print.</p></div></div></div>
+  <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:46px 54px;margin-top:20px;display:flex;justify-content:space-between;align-items:center;gap:36px;flex-wrap:wrap;">
+    <div><p class="serif" style="font-size:42px;color:#fff;margin:0 0 8px;">Questions? Just message me.</p><p style="font-size:29px;color:#B9CABF;margin:0;">Friendly help + a quick-start guide included. Personal & single-business use.</p></div>
+    <span class="badge" style="background:var(--brass);border-color:var(--brass);color:#fff;"><span class="d" style="background:#fff;"></span>Instant digital download</span>
+  </div>
+</section>
