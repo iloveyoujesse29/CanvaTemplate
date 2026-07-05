@@ -1,0 +1,89 @@
+<style>
+  :root{--pine:#1E3A34;--pine-soft:#2C4F47;--euc:#DCE7E0;--euc-deep:#C4D6CB;--warm:#FBFAF7;
+    --brass:#A9803A;--brass-soft:#C29A54;--ink:#33403B;--muted:#6A756F;--hair:#D9D2C6;}
+  *{box-sizing:border-box;}
+  .serif{font-family:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,serif;}
+  .board{width:2000px;height:2000px;overflow:hidden;position:relative;
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;color:var(--ink);}
+  .wordmark{font-family:Georgia,serif;font-weight:700;color:var(--pine);letter-spacing:.01em;}
+  .wordmark .s{color:var(--brass);}
+  .ey{font-size:34px;letter-spacing:.34em;text-transform:uppercase;color:var(--brass);font-weight:700;}
+  /* ---- mini pine cover mockup ---- */
+  .mock{width:820px;height:1062px;background:var(--pine);border-radius:10px;position:relative;
+    box-shadow:0 60px 120px rgba(30,58,52,.38);padding:78px 74px;color:#EAF1EC;overflow:hidden;}
+  .mock .mm{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:24px;}
+  .mock .mmk{font-family:Georgia,serif;font-weight:700;font-size:30px;color:#fff;} .mock .mmk .s{color:var(--brass-soft);}
+  .mock .mp{font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:#9FB2AA;}
+  .mock .mey{font-size:24px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass-soft);font-weight:700;margin-top:64px;}
+  .mock h3{font-family:Georgia,serif;font-weight:400;color:#fff;font-size:104px;line-height:1.01;margin:20px 0 0;}
+  .mock .r{width:110px;height:6px;background:var(--brass);margin:52px 0;border:0;}
+  .mock .ml{font-size:30px;line-height:1.5;color:#CBD8D0;max-width:22ch;}
+  .mock .mf{position:absolute;left:74px;right:74px;bottom:74px;border-top:1px solid rgba(255,255,255,.2);padding-top:28px;display:flex;justify-content:space-between;}
+  .mock .mf .l{font-size:18px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-soft);}
+  .mock .mf .v{font-family:Georgia,serif;font-style:italic;color:var(--brass-soft);font-size:30px;margin-top:8px;}
+  /* badges */
+  .badges{display:flex;gap:26px;flex-wrap:wrap;}
+  .badge{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.9);border:1px solid var(--euc-deep);border-radius:100px;padding:20px 34px;font-size:30px;color:var(--pine);font-weight:600;}
+  .badge .d{width:16px;height:16px;border-radius:50%;background:var(--brass);}
+</style>
+
+<!-- BOARD 1 — HERO -->
+<section data-document-role="page" data-label="Hero" class="board" style="background:linear-gradient(135deg,#E7EFE8 0%,#FBFAF7 60%);">
+  <div style="position:absolute;top:110px;left:130px;"><span class="wordmark" style="font-size:44px;">The Solo <span class="s">Suite</span></span></div>
+  <div style="display:flex;height:100%;align-items:center;padding:0 130px;gap:70px;">
+    <div style="flex:1;">
+      <p class="ey">Client Toolkit</p>
+      <h1 class="serif" style="font-size:150px;line-height:.98;color:var(--pine);margin:22px 0 0;letter-spacing:-.01em;">Client<br>Welcome<br>Packet</h1>
+      <hr style="width:120px;height:7px;background:var(--brass);border:0;margin:44px 0;">
+      <p style="font-size:44px;line-height:1.4;color:var(--pine-soft);max-width:15ch;">The done-for-you welcome every new client should get.</p>
+      <p style="font-size:34px;color:var(--muted);margin-top:40px;">For virtual assistants, OBMs &amp; freelancers</p>
+    </div>
+    <div style="flex:0 0 auto;transform:rotate(2.2deg);">
+      <div class="mock">
+        <div class="mm"><span class="mmk">The Solo <span class="s">Suite</span></span><span class="mp">Client Welcome</span></div>
+        <p class="mey">Welcome aboard</p>
+        <h3 class="serif">A warm<br>hello &amp; what<br>happens next.</h3>
+        <hr class="r">
+        <p class="ml">Everything you need to know about working together — laid out simply.</p>
+        <div class="mf"><div><p class="l">Prepared for</p><p class="v">{Client Name}</p></div><div style="text-align:right;"><p class="l">From</p><p class="v">{Your Name}</p></div></div>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:110px;left:130px;" class="badges">
+    <span class="badge"><span class="d"></span>6 editable pages</span>
+    <span class="badge"><span class="d"></span>Free Canva</span>
+    <span class="badge"><span class="d"></span>Instant download</span>
+  </div>
+</section>
+
+<!-- BOARD 2 — WHAT'S INSIDE -->
+<section data-document-role="page" data-label="What's inside" class="board" style="background:var(--warm);padding:150px 130px;">
+  <span class="wordmark" style="font-size:40px;">The Solo <span class="s">Suite</span></span>
+  <p class="ey" style="margin-top:70px;">6 designed pages</p>
+  <h2 class="serif" style="font-size:120px;color:var(--pine);margin:16px 0 70px;font-weight:400;">What's inside.</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px;">
+    <div style="background:var(--pine);color:#EAF1EC;border-radius:14px;padding:56px;height:440px;display:flex;flex-direction:column;justify-content:space-between;"><span class="serif" style="font-size:96px;color:var(--brass-soft);">01</span><div><h4 class="serif" style="font-size:52px;color:#fff;margin:0 0 14px;font-weight:400;">Cover</h4><p style="font-size:30px;color:#CBD8D0;margin:0;">A warm, branded first impression.</p></div></div>
+    <div style="background:var(--euc);border-radius:14px;padding:56px;height:440px;display:flex;flex-direction:column;justify-content:space-between;"><span class="serif" style="font-size:96px;color:var(--brass);">02</span><div><h4 class="serif" style="font-size:52px;color:var(--pine);margin:0 0 14px;font-weight:400;">Welcome letter</h4><p style="font-size:30px;color:var(--pine-soft);margin:0;">A personal note that sets the tone.</p></div></div>
+    <div style="background:var(--euc);border-radius:14px;padding:56px;height:440px;display:flex;flex-direction:column;justify-content:space-between;"><span class="serif" style="font-size:96px;color:var(--brass);">03</span><div><h4 class="serif" style="font-size:52px;color:var(--pine);margin:0 0 14px;font-weight:400;">Onboarding timeline</h4><p style="font-size:30px;color:var(--pine-soft);margin:0;">The first two weeks, step by step.</p></div></div>
+    <div style="background:var(--euc);border-radius:14px;padding:56px;height:440px;display:flex;flex-direction:column;justify-content:space-between;"><span class="serif" style="font-size:96px;color:var(--brass);">04</span><div><h4 class="serif" style="font-size:52px;color:var(--pine);margin:0 0 14px;font-weight:400;">How we'll work</h4><p style="font-size:30px;color:var(--pine-soft);margin:0;">Hours, response times &amp; tools.</p></div></div>
+    <div style="background:var(--euc);border-radius:14px;padding:56px;height:440px;display:flex;flex-direction:column;justify-content:space-between;"><span class="serif" style="font-size:96px;color:var(--brass);">05</span><div><h4 class="serif" style="font-size:52px;color:var(--pine);margin:0 0 14px;font-weight:400;">Services &amp; investment</h4><p style="font-size:30px;color:var(--pine-soft);margin:0;">Your packages, clearly priced.</p></div></div>
+    <div style="background:var(--pine);color:#EAF1EC;border-radius:14px;padding:56px;height:440px;display:flex;flex-direction:column;justify-content:space-between;"><span class="serif" style="font-size:96px;color:var(--brass-soft);">06</span><div><h4 class="serif" style="font-size:52px;color:#fff;margin:0 0 14px;font-weight:400;">Get-started checklist</h4><p style="font-size:30px;color:#CBD8D0;margin:0;">Three small steps to kick off.</p></div></div>
+  </div>
+</section>
+
+<!-- BOARD 3 — HOW IT WORKS -->
+<section data-document-role="page" data-label="How it works" class="board" style="background:var(--pine);padding:160px 130px;color:#EAF1EC;">
+  <span class="wordmark" style="font-size:40px;color:#fff;">The Solo <span style="color:var(--brass-soft);">Suite</span></span>
+  <p class="ey" style="margin-top:70px;color:var(--brass-soft);">Ready in minutes</p>
+  <h2 class="serif" style="font-size:120px;color:#fff;margin:16px 0 90px;font-weight:400;">How it works.</h2>
+  <div style="display:flex;flex-direction:column;gap:54px;">
+    <div style="display:flex;align-items:center;gap:48px;border-bottom:1px solid rgba(255,255,255,.16);padding-bottom:54px;"><span class="serif" style="font-size:110px;color:var(--brass-soft);line-height:1;">1</span><div><h4 class="serif" style="font-size:60px;color:#fff;margin:0 0 10px;font-weight:400;">Buy &amp; download instantly</h4><p style="font-size:34px;color:#CBD8D0;margin:0;">You'll get a PDF with your Canva template link.</p></div></div>
+    <div style="display:flex;align-items:center;gap:48px;border-bottom:1px solid rgba(255,255,255,.16);padding-bottom:54px;"><span class="serif" style="font-size:110px;color:var(--brass-soft);line-height:1;">2</span><div><h4 class="serif" style="font-size:60px;color:#fff;margin:0 0 10px;font-weight:400;">Open in free Canva</h4><p style="font-size:34px;color:#CBD8D0;margin:0;">Click "Use template" — no design skills needed.</p></div></div>
+    <div style="display:flex;align-items:center;gap:48px;"><span class="serif" style="font-size:110px;color:var(--brass-soft);line-height:1;">3</span><div><h4 class="serif" style="font-size:60px;color:#fff;margin:0 0 10px;font-weight:400;">Customize &amp; send</h4><p style="font-size:34px;color:#CBD8D0;margin:0;">Swap text, colors &amp; logo, then export or print.</p></div></div>
+  </div>
+  <div class="badges" style="margin-top:110px;">
+    <span class="badge"><span class="d"></span>Editable in free Canva</span>
+    <span class="badge"><span class="d"></span>US Letter · print-ready PDF</span>
+    <span class="badge"><span class="d"></span>Instant digital download</span>
+  </div>
+</section>
